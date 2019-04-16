@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"golearn/nghiem/oop"
+	"golearn/nghiem/mashal"
 	"strconv"
 )
 
@@ -260,8 +260,8 @@ func cal5(m, n int) (ce int, co int) {
 }
 
 func main() {
-	oop.Demo6()
-
+	mashal.Demo1()
+	mashal.Demo2()
 	fmt.Println()
 	fmt.Println("+----------------------------------+")
 	fmt.Println("|The end. Hit Enter key to quit... |")
