@@ -261,4 +261,10 @@ func cal5(m, n int) (ce int, co int) {
 
 func main() {
 	oop.Demo6()
+
+	fmt.Println()
+	fmt.Println("+----------------------------------+")
+	fmt.Println("|The end. Hit Enter key to quit... |")
+	fmt.Println("+----------------------------------+")
+	fmt.Scanln()
 }

@@ -60,12 +60,15 @@ func Demo5() {
 
 func Demo6() {
 	ht := entities.NewHinhTron(3.56)
+	ht1 := entities.NewHinhTron(12.56)
 	hv := entities.NewHinhVuong(4.2)
-	hinhs := []entities.Hinh{ht, hv}
+	hv1 := entities.NewHinhVuong(11.55)
+	hinhs := []entities.Hinh{ht, hv1, hv, ht1}
 	for _, hinh := range hinhs {
-		fmt.Println("------------------------------------")
-		fmt.Println("Ten hinh: ", hinh.Ten())
-		fmt.Println("Chu vi: ", hinh.ChuVi())
-		fmt.Println("Dien tich: ", hinh.DienTich())
+		fmt.Println("+----------------------------------+")
+		fmt.Println("| Ten hinh: ", hinh.Ten())
+		fmt.Println("| Chu vi: ", hinh.ChuVi())
+		fmt.Println("| Dien tich: ", hinh.DienTich())
+		fmt.Println("+----------------------------------+")
 	}
 }
