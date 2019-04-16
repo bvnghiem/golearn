@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"nghiem/oop"
+	"golearn/nghiem/oop"
 	"strconv"
 )
 
@@ -260,5 +260,5 @@ func cal5(m, n int) (ce int, co int) {
 }
 
 func main() {
-	oop.Demo()
+	oop.Demo6()
 }
