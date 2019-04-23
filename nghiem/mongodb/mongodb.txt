@@ -1,0 +1,84 @@
+//craete DB
+use session6
+
+//create collection
+db.createCollection('product')
+
+//insert
+db.getCollection('product').insert({
+    name: 'mobile 2',
+    price: 13.5,
+    quantity: 12,
+    status: true
+    })
+ 
+    
+//select all
+db.getCollection('product').find({})
+
+//condition
+db.getCollection('product').find({
+    $and: [
+        {price: { $gte : 1 }},
+        {price: { $lte : 10 }}
+    ]
+    })
+    
+db.getCollection('product').find({
+    $or: [
+        
+        {price: 3.5 },
+        {price: 13 }
+    ]
+})
+
+db.getCollection('product').find({
+    price: {$ne : 3.5 }
+})
+
+//like 'mobile%'
+db.getCollection('product').find({
+    name: /^mobile/
+})
+
+//like '%vi 1'
+db.getCollection('product').find({
+    name: /vi 1$/
+})
+
+//find like %i%
+db.getCollection('product').find({
+    name: /i/
+})
+
+//sort tang dan
+db.getCollection('product').find({}).sort({price : 1})
+
+//sort giam dan
+db.getCollection('product').find({}).sort({price : -1})
+
+//paging
+db.getCollection('product').find({}).sort({price : -1}).limit(2)
+db.getCollection('product').find({}).sort({price : -1}).limit(2).skip(3)
+
+//selection
+db.getCollection('product').find({}, {
+    name : 1,
+    price : 1
+    })
+    
+//update
+db.getCollection('product').update(
+    { _id : ObjectId("5cbebc1ebe2227ef864a925b")},
+    {
+        $set : {
+            quantity: 10
+        }
+    })
+    
+//delete
+db.getCollection('product').remove(
+    { _id : ObjectId("5cbebc80be2227ef864a925c")}
+    )
+
+//GO extension for VSC: go get gopkg.in/mgo.v2
