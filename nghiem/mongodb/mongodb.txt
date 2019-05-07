@@ -81,4 +81,7 @@ db.getCollection('product').remove(
     { _id : ObjectId("5cbebc80be2227ef864a925c")}
     )
 
-//GO extension for VSC: go get gopkg.in/mgo.v2
+//GO extension for VSC: 
+go get gopkg.in/mgo.v2
+go get -u github.com/gorilla/mux
+go get -u github.com/gorilla/handlers
