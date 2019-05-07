@@ -31,6 +31,7 @@ func main() {
 
 	//With MongoDB
 	router.HandleFunc("/api/mobile/findall", mobileapi.FindAll).Methods("GET")
+	router.HandleFunc("/api/mobile/find/{name}", mobileapi.Find).Methods("GET")
 
 	err := http.ListenAndServe(":5000", router)
 
